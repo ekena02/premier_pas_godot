@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhwffolm4oq2"]
+
+[ext_resource type="Texture2D" uid="uid://xihyo1hp32k7" path="res://scenes/PNG/Default size/Blocks/block_02.png" id="1_yekug"]
+
+[node name="obstacle2" type="StaticBody2D"]
+position = Vector2(501, 621)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-353, -612)
+polygon = PackedVector2Array(606, 640, 604, 592, 695, 592, 701, 613, 697, 642)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(301, 3.00001)
+scale = Vector2(1.4375, 0.781251)
+texture = ExtResource("1_yekug")

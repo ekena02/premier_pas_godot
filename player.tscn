@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://co3msnud4x5tx"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_iamgk"]
+[ext_resource type="Texture2D" uid="uid://18chs7ftkc7c" path="res://scenes/PNG/Default size/Player/player_01.png" id="2_hbbip"]
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(681, 140)
+script = ExtResource("1_iamgk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 11)
+scale = Vector2(2, 2)
+texture = ExtResource("2_hbbip")
+metadata/_edit_lock_ = true
+
+[node name="collision_player" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(42, 65, 35, -40, -40, -36, -54, 56)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
