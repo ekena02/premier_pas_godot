@@ -57,10 +57,10 @@ texture = ExtResource("4_4a30q")
 metadata/_edit_lock_ = true
 
 [node name="obstacle2" parent="." instance=ExtResource("4_3apxr")]
-position = Vector2(0, 627)
+position = Vector2(337, 624)
 
 [node name="obstacle3" parent="." instance=ExtResource("4_3apxr")]
-position = Vector2(701, 621)
+position = Vector2(381, 576)
 
 [node name="player_anim" parent="." instance=ExtResource("4_1dl6f")]
 
