@@ -1,24 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr1br7nglkhhj"]
 
-[ext_resource type="PackedScene" uid="uid://co3msnud4x5tx" path="res://player.tscn" id="1_b82wh"]
+[ext_resource type="PackedScene" uid="uid://co3ycfqu77nsw" path="res://player_anim.tscn" id="4_1dl6f"]
 [ext_resource type="PackedScene" uid="uid://dhwffolm4oq2" path="res://obstacle.tscn" id="4_3apxr"]
 [ext_resource type="Texture2D" uid="uid://d0nv5biwvetw3" path="res://scenes/PNG/Default size/Blocks/block_07.png" id="4_4a30q"]
 [ext_resource type="Texture2D" uid="uid://dj4nrmhp35a10" path="res://scenes/PNG/Default size/Blocks/block_04.png" id="5_l2lny"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_b82wh")]
-position = Vector2(63, 581)
-
 [node name="sol" type="StaticBody2D" parent="."]
 position = Vector2(2, 5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sol"]
 position = Vector2(4, 0)
-polygon = PackedVector2Array(2, 645, 1154, 647, 1153, -2, 1206, -55, 1210, 706, 1210, 706, -84, 702, -78, -62, -2, -3)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="sol"]
-polygon = PackedVector2Array(-82, -62, 1204, -55, 1151, -3, -4, -2)
+polygon = PackedVector2Array(-5, 645, 1154, 647, 1152, 388, 1154, 390, 1224, 511, 1224, 701, 1210, 706, -84, 702, -84, 514, -5, 400)
 
 [node name="Block07" type="Sprite2D" parent="sol"]
 position = Vector2(69, 680)
@@ -63,6 +57,9 @@ texture = ExtResource("4_4a30q")
 metadata/_edit_lock_ = true
 
 [node name="obstacle2" parent="." instance=ExtResource("4_3apxr")]
+position = Vector2(334, 627)
 
 [node name="obstacle3" parent="." instance=ExtResource("4_3apxr")]
 position = Vector2(701, 621)
+
+[node name="player_anim" parent="." instance=ExtResource("4_1dl6f")]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://co3ycfqu77nsw"]
+
+[ext_resource type="Script" path="res://player2.gd" id="1_36gks"]
+[ext_resource type="Texture2D" uid="uid://18chs7ftkc7c" path="res://scenes/PNG/Default size/Player/player_01.png" id="2_lrgbp"]
+[ext_resource type="Texture2D" uid="uid://b32gccn6equkg" path="res://scenes/PNG/Default size/Player/player_15.png" id="3_fuihq"]
+[ext_resource type="Texture2D" uid="uid://b8idq6upqpmhs" path="res://scenes/PNG/Default size/Player/player_14.png" id="4_sgmth"]
+[ext_resource type="Texture2D" uid="uid://drt1pkcbw7dn5" path="res://scenes/PNG/Default size/Player/player_16.png" id="5_vo7to"]
+[ext_resource type="Texture2D" uid="uid://bsvvwntnr35ij" path="res://scenes/PNG/Default size/Player/player_12.png" id="6_543u7"]
+[ext_resource type="Texture2D" uid="uid://c7kaq38abj4b2" path="res://scenes/PNG/Default size/Player/player_11.png" id="7_fjmem"]
+[ext_resource type="Texture2D" uid="uid://du7ligefp614w" path="res://scenes/PNG/Default size/Player/player_13.png" id="8_wyt6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fm8yc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lrgbp")
+}],
+"loop": true,
+"name": &"!move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fuihq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sgmth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vo7to")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_543u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fjmem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wyt6h")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(76, 614)
+script = ExtResource("1_36gks")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fm8yc")
+animation = &"move_left"
+metadata/_edit_lock_ = true
+
+[node name="collision_player" type="CollisionPolygon2D" parent="."]
+position = Vector2(4, 5)
+polygon = PackedVector2Array(-19, 16, 18, 15, 18, -20, -19, -21)
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3, 0)
+drag_horizontal_offset = 0.55
+drag_vertical_offset = -0.23
+metadata/_edit_lock_ = true
