@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c84qh5076l5s0"]
+
+[ext_resource type="Texture2D" uid="uid://cdbg4cevpicnh" path="res://scenes/heart.png" id="1_k0v1p"]
+
+[node name="heart" type="Area2D"]
+position = Vector2(289, 141)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 12, 14, 2, 15, -8, 9, -14, -11, -12, -15, -9, -16, -1)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k0v1p")
+metadata/_edit_lock_ = true

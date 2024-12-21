@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -650.0
 @onready var sprite = $sprite
 
 
@@ -17,7 +17,7 @@ func move():
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta*2
 
 	# Handle jump.
 	#<>
@@ -36,11 +36,14 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = velocity.x < 0
 	else:
 		sprite.play("!move")
-		
-	
-
-		
 	#else:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+func touchee():
+	print("touchee")
+	$Label.text = str(int($Label.text)-1)
+func vie():
+	print("vie")
+	$Label.text = str(int($Label.text)+1)
+	
